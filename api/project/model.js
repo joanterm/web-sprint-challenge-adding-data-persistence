@@ -30,7 +30,6 @@ function addNewProject(project) {
         })
 }
 
-
 module.exports = {
     getAllProjects,
     getProjectsById,

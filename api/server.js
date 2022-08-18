@@ -5,6 +5,8 @@ server.use(express.json())
 //ROUTER
 const projectRouter = require("./project/router")
 server.use("/api/projects", projectRouter)
+const resourceRouter = require("./resource/router")
+server.use("/api/resources", resourceRouter)
 
 //SANITY CHECK
 server.get("/", (req, res) => {
