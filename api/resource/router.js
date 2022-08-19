@@ -26,10 +26,7 @@ resourceRouter.post("/", (req, res, next) => {
 
 //ERROR HANDLING
 resourceRouter.use((err, req, res, next) =>{
-    res.status(err.status || 500).json({
-        message: err.message,
-        stack: err.stack
-    })
+    res.status(err.status || 500).json({message: err.message})
 })
 
 module.exports = resourceRouter
